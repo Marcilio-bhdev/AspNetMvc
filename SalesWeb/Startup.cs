@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using SalesWeb.Data;
+using SalesWeb.Services;
 
 namespace SalesWeb
 {
@@ -32,6 +33,7 @@ namespace SalesWeb
                                 builder.MigrationsAssembly("SalesWeb")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SallerService>();
            
         }
 
